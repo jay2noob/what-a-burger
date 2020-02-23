@@ -9,8 +9,6 @@ const burger = {
     });
   },
 
-  // The variables cols and vals are arrays.
-
   all: function(cb) {
     orm.selectAll("burgers", function(res) {
       cb(res);
@@ -19,7 +17,6 @@ const burger = {
 
   update: function(id, objColVals, cb) {
     console.log("HERE!: " + id);
-
     console.log(objColVals);
 
     let condition = {
@@ -31,7 +28,5 @@ const burger = {
     });
   }
 };
-
-// Export the database functions for the controller (catsController.js).
 
 module.exports = burger;
